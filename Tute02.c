@@ -2,7 +2,7 @@
 
 Write a program to calculate the amount to be paid for a rented vehicle.
 
-•	Input the distance the van has travelled
+•	Input the distance the van has traveled
 •	The first 30 km is at a rate of 50/= per km.
 •	The remaining distance is calculated at the rate of 40/= per km.
 
@@ -19,6 +19,21 @@ Amount = 30 x 50 + (50-30) x 40 = 2300*/
 #include <stdio.h>
 
 int main() {
+  float dist, amount;
+  
+  printf("enter the distance travelled: ");
+  scanf("%f",&dist);
+  
+  if(dist <= 30)
+  {
+    amount = dist * 50;
+  }
+  else if(dist > 30)
+  {
+    amount = 30 * 50 +((dist-30) * 40);
+  }
+
+  printf("final amount for the distance : %.2f",amount);
   
   return 0;
 }
